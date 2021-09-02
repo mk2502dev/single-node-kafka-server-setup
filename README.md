@@ -14,9 +14,9 @@
 ```
 if you get error while runing kafka server goto config folder and edit server.properties. 
 Search for listeners and add the following command `listeners=PLAINTEXT://localhost:9092`
-and restart the zookeeper and kafka broker.
+and restart the zookeeper and kafka broker once again.
 
-5. Create the Topic 
+5. Open another terminal (producer) and Create the Topic 
 ```
 .\kafka-topics.bat --create --topic test1 --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
 ```
@@ -24,7 +24,7 @@ and restart the zookeeper and kafka broker.
 ```
 .\kafka-console-producer.bat --topic test1 --bootstrap-server localhost:9092
 ```
-7. Start Kafka consumer
+7.  Open another terminal (consumer) and Start Kafka consumer
 ```
 .\kafka-console-consumer.bat --topic test1 --bootstrap-server localhost:9092 --from-beginning
 ```
